@@ -11,7 +11,7 @@ interface Props {
 const {
   title = `${site.fullName} — ${site.role}`,
   description = site.tagline,
-  image = "/img/carlos.jpg",
+image = "/portafolio-carlos/img/carlos.png",
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://carlosarmijos.dev/").toString();
