@@ -16,7 +16,7 @@ export const site = {
     github: "https://github.com/CarlosArmijos1",
     linkedin: "https://www.linkedin.com/in/carlos-armijos-b676b71b2/",
   },
-  resumeUrl: "/cv-carlos-armijos.pdf",
+  resumeUrl: "/portafolio-carlos/cv-carlos-armijos.pdf",
   stats: {
     experience: "3+ años",
     projects: "10+",
