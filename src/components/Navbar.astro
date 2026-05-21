@@ -1,0 +1,51 @@
+---
+import { site, navLinks } from "../data/site";
+import Logo from "./Logo.astro";
+---
+
+<header
+  class="sticky top-0 z-50 w-full border-b border-[var(--color-border)] bg-[var(--color-background)]/70 backdrop-blur-md"
+>
+  <nav class="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
+    <Logo />
+
+    <ul class="hidden md:flex items-center gap-7 text-sm font-medium">
+      {navLinks.map((l) => (
+        <li>
+          <a
+            href={l.href}
+            class="relative text-[var(--color-muted-foreground)] hover:text-[var(--color-foreground)] transition-colors group py-1"
+          >
+            {l.label}
+            <span class="absolute -bottom-1 left-0 w-full h-[2px] bg-[var(--color-primary)] scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="flex items-center gap-2">
+      <a
+        href={site.resumeUrl}
+        class="hidden sm:inline-flex items-center text-sm font-medium px-3 py-1.5 rounded-md bg-[var(--color-primary)] text-white hover:opacity-90 transition-opacity"
+      >
+        CV
+      </a>
+      <button
+        id="theme-toggle"
+        aria-label="Cambiar tema"
+        class="size-9 rounded-full border border-[var(--color-border)] flex items-center justify-center hover:bg-[var(--color-muted)] transition-colors"
+      >
+        <svg class="size-4 hidden dark:block text-[var(--color-primary)]" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="size-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+  const btn = document.getElementById("theme-toggle");
+  btn?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>

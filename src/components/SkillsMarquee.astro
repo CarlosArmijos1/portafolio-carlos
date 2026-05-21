@@ -1,0 +1,34 @@
+---
+import TechIcon from "./TechIcon.astro";
+
+const techs = [
+  "python",
+  "opencv",
+  "pytorch",
+  "tensorflow",
+  "numpy",
+  "pandas",
+  "jupyter",
+  "scikit",
+  "javascript",
+  "typescript",
+  "react",
+  "nextjs",
+  "node",
+  "tailwind",
+  "html",
+  "css",
+  "mysql",
+  "mongo",
+  "docker",
+  "git",
+  "figma",
+];
+const loop = [...techs, ...techs];
+---
+
+<section class="border-y border-[var(--color-border)] bg-[var(--color-background)]/50 overflow-hidden">
+  <div class="flex flex-nowrap whitespace-nowrap animate-marquee">
+    {loop.map((t) => <TechIcon name={t} />)}
+  </div>
+</section>

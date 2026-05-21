@@ -1,0 +1,31 @@
+---
+import { skills } from "../data/site";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<section id="skills" class="py-20 px-4">
+  <div class="mx-auto max-w-6xl">
+    <SectionHeading
+      title="Experiencia técnica"
+      subtitle="Resumen del stack y herramientas que uso a diario."
+    />
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {skills.map((g) => (
+        <div class="rounded-xl border border-[var(--color-border)] p-6 bg-[var(--color-background)]/40 hover:border-[var(--color-primary)]/40 transition-colors">
+          <h3 class="font-serif text-lg font-semibold mb-4 flex items-center gap-2">
+            <span class="size-1.5 rounded-full bg-[var(--color-primary)]"></span>
+            {g.group}
+          </h3>
+          <ul class="flex flex-wrap gap-2">
+            {g.items.map((s) => (
+              <li class="text-xs font-mono px-2.5 py-1 rounded-md bg-[var(--color-muted)] text-[var(--color-foreground)]">
+                {s}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

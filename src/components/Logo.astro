@@ -1,0 +1,12 @@
+---
+import { site } from "../data/site";
+---
+
+<a href="#" class="flex items-center gap-2 group" aria-label={site.fullName}>
+  <span class="relative inline-flex items-center justify-center size-9 rounded-md border border-[var(--color-border)] bg-[var(--color-background)]">
+    <span class="font-serif text-sm font-bold tracking-tight">
+      {site.monogram[0]}<span class="text-[var(--color-primary)]">{site.monogram[1]}</span>
+    </span>
+    <span class="absolute -bottom-0.5 left-1.5 right-1.5 h-[2px] bg-[var(--color-primary)] origin-left scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+  </span>
+</a>

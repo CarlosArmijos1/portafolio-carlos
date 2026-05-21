@@ -1,0 +1,117 @@
+---
+import { site } from "../data/site";
+---
+
+<section
+  id="about"
+  class="relative min-h-[calc(100vh-4rem)] w-full py-12 md:py-24 flex items-center justify-center overflow-hidden"
+>
+  <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+    <div class="w-[800px] h-[800px] max-w-full bg-[var(--color-primary)]/15 dark:bg-[var(--color-primary)]/25 blur-[140px] rounded-full"></div>
+  </div>
+  <div class="absolute inset-0 z-0 grid-pattern text-[var(--color-foreground)] opacity-[0.04] dark:opacity-[0.06]"></div>
+
+  <div class="container relative z-10 mx-auto max-w-6xl px-4 md:px-6">
+    <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+
+      <div class="flex flex-col gap-6 animate-fade-up">
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
+          <span class="block">Hola, soy</span>
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400 dark:from-red-500 dark:to-red-300">
+            {site.fullName}
+          </span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl font-medium text-[var(--color-muted-foreground)]">
+          <span class="text-[var(--color-primary)] font-mono">&lt;Dev&gt;</span>
+          {site.role}
+          <span class="text-[var(--color-primary)] font-mono">/&gt;</span>
+        </p>
+
+        <p class="max-w-xl text-[var(--color-muted-foreground)] md:text-lg leading-relaxed">
+          {site.shortIntro}
+        </p>
+
+        <div class="flex flex-col gap-3 sm:flex-row pt-2">
+          <a
+            href="#projects"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[var(--color-primary)] text-white font-medium hover:opacity-90 transition-opacity"
+          >
+            Ver proyectos
+            <svg class="ml-2 size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a
+            href={site.resumeUrl}
+            class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-[var(--color-border)] hover:bg-[var(--color-muted)] font-medium transition-colors"
+          >
+            Descargar CV
+            <svg class="ml-2 size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          </a>
+        </div>
+
+        <div class="flex gap-5 text-[var(--color-muted-foreground)] pt-2">
+          <a href={site.socials.github} target="_blank" rel="noopener" class="hover:text-[var(--color-primary)] transition-colors" aria-label="GitHub">
+            <svg class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.93 10.93 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.18c0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a href={site.socials.linkedin} target="_blank" rel="noopener" class="hover:text-[var(--color-primary)] transition-colors" aria-label="LinkedIn">
+            <svg class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.22 0z"/></svg>
+          </a>
+          <a href={`mailto:${site.email}`} class="hover:text-[var(--color-primary)] transition-colors" aria-label="Email">
+            <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center lg:justify-end">
+        <div class="relative group">
+          <div class="absolute -inset-4 rounded-xl bg-[var(--color-primary)]/15 blur-2xl group-hover:bg-[var(--color-primary)]/30 transition-all duration-500"></div>
+
+          <div class="relative w-full max-w-sm rotate-3 hover:rotate-0 transition-transform duration-500 rounded-xl overflow-hidden border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] backdrop-blur-xl shadow-2xl">
+            <div class="aspect-[3/4] bg-zinc-100 dark:bg-zinc-800 overflow-hidden relative">
+              <img
+                src="/img/carlos.jpg"
+                alt={site.fullName}
+                width="600"
+                height="800"
+                loading="eager"
+                class="w-full h-full object-cover object-[center_20%] grayscale hover:grayscale-0 transition-all duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent dark:from-black/50 pointer-events-none"></div>
+            </div>
+
+            <div class="p-6 space-y-4">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5 text-sm text-[var(--color-muted-foreground)]">
+                  <svg class="size-4 text-[var(--color-primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>{site.location}</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="relative flex size-2.5">
+                    <span class="absolute inline-flex h-full w-full rounded-full bg-[var(--color-primary)] opacity-75 animate-ping"></span>
+                    <span class="relative inline-flex size-2.5 rounded-full bg-[var(--color-primary)]"></span>
+                  </span>
+                  <span class="text-xs font-medium text-[var(--color-primary)]">Disponible</span>
+                </div>
+              </div>
+
+              <div class="space-y-2 font-mono text-xs border-t border-[var(--color-border)] pt-4">
+                <div class="flex justify-between">
+                  <span class="text-[var(--color-muted-foreground)]">experiencia:</span>
+                  <span>{site.stats.experience}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[var(--color-muted-foreground)]">proyectos:</span>
+                  <span>{site.stats.projects}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[var(--color-muted-foreground)]">stack:</span>
+                  <span>{site.stats.stack}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
