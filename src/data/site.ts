@@ -88,6 +88,16 @@ export const experience = [
 
 export const projects = [
   {
+    title: "Tutor Técnico IA",
+    year: "2026",
+    description:
+      "Tutor educativo multi-agente construido con LangGraph. Un equipo de agentes (guardián, explicador, ejercitador y evaluador) enseña materias técnicas dando pistas en lugar de respuestas. Incluye guardarraíl de temas, imágenes educativas de Wikipedia y evaluación de respuestas por PDF.",
+    tags: ["Python", "LangGraph", "AI Agents", "Groq API", "Streamlit"],
+    href: "https://github.com/CarlosArmijos1/tutor-tecnico-agentes",
+    repo: "https://github.com/CarlosArmijos1/tutor-tecnico-agentes",
+    featured: true,
+  },
+  {
     title: "MedInsight AI",
     year: "2025",
     description:
