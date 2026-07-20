@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de Privacidad — SyncSound</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 760px; margin: 0 auto; padding: 32px 20px 80px;
+      line-height: 1.65; color: #1a1a2e; background: #fbfbfe;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e8ecf6; background: #0b0f1f; }
+      a { color: #67e8f9; }
+      h1, h2 { color: #a78bfa; }
+      .card { background: #141a30; border-color: #26304d; }
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 4px; }
+    h2 { font-size: 1.2rem; margin-top: 32px; }
+    .muted { color: #6b7280; font-size: 0.9rem; }
+    .card {
+      background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+      padding: 16px 20px; margin: 16px 0;
+    }
+    ul { padding-left: 20px; }
+    code { background: rgba(128,128,128,.15); padding: 1px 6px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Política de Privacidad de SyncSound</h1>
+  <p class="muted">Última actualización: 20 de julio de 2026</p>
+
+  <p>
+    SyncSound ("la aplicación") es una app de Android que sincroniza la
+    reproducción de audio entre varios teléfonos conectados a la misma red
+    Wi-Fi local. Esta política explica qué datos maneja la aplicación y cómo
+    los trata. El desarrollador de la aplicación es Carlos Armijos ("nosotros").
+  </p>
+
+  <div class="card">
+    <strong>Resumen:</strong> SyncSound no recopila, no almacena y no comparte
+    ningún dato personal. La aplicación no tiene servidores propios: toda la
+    comunicación ocurre directamente entre tus dispositivos dentro de tu red
+    Wi-Fi local.
+  </div>
+
+  <h2>1. Datos que NO recopilamos</h2>
+  <p>
+    La aplicación no recopila información de identificación personal, no crea
+    cuentas de usuario, no utiliza identificadores publicitarios, no incluye
+    publicidad ni herramientas de analítica de terceros, y no transmite
+    información a servidores externos ni a internet.
+  </p>
+
+  <h2>2. Procesamiento local de audio</h2>
+  <ul>
+    <li>
+      <strong>Archivos de música:</strong> cuando eliges una canción, la
+      aplicación la decodifica y la transfiere a los otros dispositivos de tu
+      sesión a través de la red Wi-Fi local, únicamente para reproducirla en
+      sincronía. El audio se guarda temporalmente en el almacenamiento en
+      caché del dispositivo y se elimina al cerrar la sesión. No se sube a
+      ningún servidor.
+    </li>
+    <li>
+      <strong>Captura de audio del sistema:</strong> con tu autorización
+      explícita, la aplicación puede capturar el audio que reproduce tu propio
+      dispositivo para transmitirlo a los altavoces de tu sesión, en tiempo
+      real y solo dentro de tu red local. Este audio no se graba ni se
+      almacena de forma permanente.
+    </li>
+  </ul>
+
+  <h2>3. Permisos y por qué se usan</h2>
+  <ul>
+    <li>
+      <strong>Micrófono (RECORD_AUDIO):</strong> se utiliza exclusivamente
+      junto con la API de captura de reproducción de Android
+      (<code>AudioPlaybackCapture</code>) para capturar el audio interno del
+      dispositivo y retransmitirlo a los altavoces del usuario. La aplicación
+      <em>no</em> graba el micrófono ambiente ni almacena grabaciones.
+    </li>
+    <li>
+      <strong>Acceso a notificaciones:</strong> es opcional. Si lo concedes, la
+      aplicación lee únicamente la información de la sesión multimedia activa
+      (título, artista y carátula) para mostrarla en pantalla. No lee, guarda
+      ni transmite el contenido de tus notificaciones.
+    </li>
+    <li>
+      <strong>Mostrar sobre otras apps:</strong> es opcional. Permite mostrar
+      controles flotantes de reproducción mientras usas otra aplicación.
+    </li>
+    <li>
+      <strong>Red Wi-Fi y servicio en primer plano:</strong> permiten
+      descubrir los dispositivos de la sesión y mantener la reproducción
+      sincronizada mientras la pantalla está apagada.
+    </li>
+  </ul>
+
+  <h2>4. Compras dentro de la aplicación</h2>
+  <p>
+    La aplicación ofrece una compra única opcional ("Pro") gestionada
+    íntegramente por Google Play. Nosotros no vemos ni almacenamos datos de
+    pago; esa información la trata Google conforme a su propia política de
+    privacidad.
+  </p>
+
+  <h2>5. Datos de menores</h2>
+  <p>
+    La aplicación no está dirigida a menores de 13 años y no recopila
+    conscientemente datos de ellos.
+  </p>
+
+  <h2>6. Cambios en esta política</h2>
+  <p>
+    Podemos actualizar esta política ocasionalmente. La fecha de la última
+    actualización aparece al inicio de esta página.
+  </p>
+
+  <h2>7. Contacto</h2>
+  <p>
+    Ante cualquier duda sobre esta política de privacidad, puedes escribir a:
+    <a href="mailto:karlozarmijoz@gmail.com">karlozarmijoz@gmail.com</a>.
+  </p>
+</body>
+</html>
