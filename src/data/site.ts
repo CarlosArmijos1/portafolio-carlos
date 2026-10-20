@@ -39,7 +39,7 @@ export const skills = [
   },
   {
     group: "Full-Stack",
-    items: ["React", "Next.js", "FastAPI", "Node.js", "Streamlit"],
+    items: ["React", "Next.js", "FastAPI", "Node.js", "Express", "Streamlit"],
   },
   {
     group: "Datos & Vectores",
@@ -47,11 +47,25 @@ export const skills = [
   },
   {
     group: "Herramientas",
-    items: ["Git", "Docker", "GitHub Actions", "Linux", "n8n", "Vercel"],
+    items: ["Git", "Docker", "GitHub Actions", "Linux", "n8n", "Vercel", "Cloudflare"],
   },
 ];
 
 export const experience = [
+  {
+    role: "Full-Stack Developer",
+    company: "Plataforma de servicios digitales por suscripción",
+    period: "2026 — Presente",
+    summary:
+      "Sistema self-hosted en producción que reemplazó a un proveedor externo: recibe correos de varios dominios propios, extrae automáticamente códigos de verificación y enlaces de acción, y los entrega a cada cliente en un portal web seguro.",
+    bullets: [
+      "Ingesta de correo con Cloudflare Email Workers y webhooks; parseo MIME y extracción de OTP y enlaces con reglas por proveedor.",
+      "Portal multinivel: cada cliente administra a sus propios sub-clientes, les asigna cuentas y les genera tokens de acceso; el administrador puede revocar accesos en cualquier momento.",
+      "Integración con Google Sheets / Apps Script como fuente de verdad de cuentas, planes y vencimientos, y alertas en tiempo real por Telegram ante cambios sospechosos.",
+      "Seguridad: sesiones firmadas con HMAC, captcha Cloudflare Turnstile, rate limiting por IP y contenido de correos aislado en iframe sandbox.",
+      "Node.js/Express + SQLite en VPS Linux con PM2, Caddy (HTTPS automático), UFW y fail2ban; interfaz responsive tipo app sin frameworks.",
+    ],
+  },
   {
     role: "AI Engineer & Full-Stack Developer",
     company: "Freelance",
